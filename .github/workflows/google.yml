@@ -89,3 +89,8 @@ jobs:
         ./kustomize build . | kubectl apply -f -
         kubectl rollout status deployment/$DEPLOYMENT_NAME
         kubectl get services -o wide
+
+- name: Authenticate to Google Cloud
+
+  uses: google-github-actions/auth@v1.1.1
+
